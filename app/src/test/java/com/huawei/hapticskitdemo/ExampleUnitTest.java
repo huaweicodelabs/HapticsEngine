@@ -1,4 +1,4 @@
-package com.lr.aodiu.hapticskitdemo;
+package com.huawei.hapticskitdemo;
 
 import org.junit.Test;
 
