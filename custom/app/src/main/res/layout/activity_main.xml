@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <Button
+                    android:id="@+id/btnParseJson"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:focusable="false"
+                    android:text="json模式"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+            <TextView
+                    android:id="@+id/tv_parseResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="result"
+                    android:textColor="#F09BED"
+                    android:textSize="15sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <Button
+                    android:id="@+id/btnDefine"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:focusable="false"
+                    android:text="自定义模式"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+            <TextView
+                    android:id="@+id/tv_defineResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="result"
+                    android:textColor="#F09BED"
+                    android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="3px"
+            android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+        <LinearLayout
+                android:layout_width="382dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <Button
+                    android:id="@+id/btnIntensity"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:focusable="false"
+                    android:text="动态强度"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+            <EditText
+                    android:id="@+id/et_intensityTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789.-"
+                    android:hint="time(ms):50"
+                    android:inputType="number"
+                    android:textColor="#F09BED"
+                    android:textSize="15sp"/>
+
+            <EditText
+                    android:id="@+id/et_intensityPara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="0123456789.-"
+                    android:hint="0~1000000"
+                    android:inputType="number"
+                    android:textColor="#F09BED"
+                    android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <Button
+                    android:id="@+id/btnSharpness"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:focusable="false"
+                    android:text="动态锐度"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+
+            <EditText
+                    android:id="@+id/et_sharpnessTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="0123456789.-"
+                    android:hint="time(ms):100"
+                    android:inputType="number"
+                    android:textColor="#F09BED"
+                    android:textSize="15sp"/>
+
+            <EditText
+                    android:id="@+id/et_sharpnessPara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="0123456789.-"
+                    android:hint="-2~2"
+                    android:inputType="number"
+                    android:textColor="#F09BED"
+                    android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <Button
+                    android:id="@+id/btnSetDynamic"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:focusable="false"
+                    android:text="动态调节"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+            <TextView
+                    android:id="@+id/tv_dynamicResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#38ADFF"
+                    android:textSize="16sp"/>
+
+            <Button
+                    android:id="@+id/btnDuration"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:focusable="false"
+                    android:text="duration"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <Button
+                    android:id="@+id/btn_queryLoop"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:focusable="false"
+                    android:text="查询循环"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+            <TextView
+                    android:id="@+id/tv_Looping"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            <Button
+                    android:id="@+id/btn_queryPlay"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:focusable="false"
+                    android:text="查询播放"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"/>
+
+            <TextView
+                    android:id="@+id/tv_play"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/tv_stop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/btn_looping"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:text="循环"
+                    android:textSize="10sp"/>
+
+            <Button
+                    android:id="@+id/btn_play"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="播放"
+                    android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

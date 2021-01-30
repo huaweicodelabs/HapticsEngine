@@ -1,0 +1,123 @@
+{
+    "version": 1.0,
+    "channels": 1,
+    "metadata":
+	{
+		"Title": "Haptic Wave Sample",
+		"Created": "2020.8.28",
+		"Description": "a sample of haptic wave file",
+		"Author": "Huawei Technologies Co., Ltd."
+	},
+    "waveform":
+    [
+        {
+            "channel":"hapticA",
+			"wave":
+            [
+				{
+				    "slice":
+					{
+						"time": 0,
+						"type": "continuous",
+						"duration": 50,
+						"intensity": 1,
+						"sharpness": 0.3
+				    }
+				},
+				{
+				    "slice":
+					{
+						"time": 400,
+						"type": "continuous",
+						"duration": 100,
+						"intensity": 1 ,
+						"sharpness": 0.3
+				    }
+				},
+				{
+				    "slice":
+					{
+						"time": 1200,
+						"type": "continuous",
+						"duration": 50,
+						"intensity": 1,
+						"sharpness": 0
+				    }
+				},
+				{
+				    "slice":
+					{
+						"time": 1700,
+						"type": "continuous",
+						"duration": 200,
+						"intensity": 0.6
+				    }
+				},
+				{
+				    "slice":
+					{
+						"time": 2200,
+						"type": "continuous",
+						"duration": 150,
+						"intensity": 0.25 ,
+						"sharpness": 1.0
+				    }
+				},
+				{
+				    "slice":
+					{
+						"time": 2600,
+						"type": "continuous",
+						"duration": 1000,
+						"intensity": 0.25 ,
+					    "sharpness": 1.0
+				    }
+				},
+				{
+				    "slice":
+					{
+						"time": 3600,
+						"type": "continuous",
+						"duration": 1000,
+						"intensity": 0.8,
+                        "sharpness": 0.9
+				    }
+				},
+				{
+					"slice":
+					{
+						"time": 6600,
+						"type": "continuous",
+						"duration": 1000,
+						"intensity": 1,
+						"sharpness": 0.9
+					}
+				}
+			],
+            "adjustcurve":
+			[
+				{
+					"intensity":
+					{
+						"adjustpoint":
+						[
+							{ "time": 0, "parameters": 0.4 },
+							{ "time": 400, "parameters": 0.75 },
+							{ "time": 1200, "parameters": 2.0 }
+						]
+					}
+				},
+				{
+					"sharpness":
+					{
+						"adjustpoint":
+						[
+							{ "time": 0, "parameters": -0.4 },
+							{ "time": 1200, "parameters": 0.75 }
+						]
+					}
+				}
+			]
+        }
+    ]
+}
